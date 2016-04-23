@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  SummaryViewController.h
 //  AShortDemo
 //
 //  Created by momofarm on 4/21/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface SummaryViewController : UIViewController
 
 @end
-

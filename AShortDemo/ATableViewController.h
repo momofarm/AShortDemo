@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ATableViewController.h
 //  AShortDemo
 //
 //  Created by momofarm on 4/21/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface ATableViewController : UITableViewController
 
 @end
-

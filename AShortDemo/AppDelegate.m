@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedPuller.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,27 @@
 @implementation AppDelegate
 
 
+NSString *strUDN = @"http://udn.com/udnrss/latest.xml";
+NSString *strLTN = @"http://news.ltn.com.tw/rss/focus.xml";
+NSString *strApple = @"http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/new";
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *aryUDN = [[FeedPuller sharedMgr] parse:strUDN];
+    NSArray *aryLTN = [[FeedPuller sharedMgr] parse:strLTN];
+    NSArray *aryApple = [[FeedPuller sharedMgr] parse:strApple];
+    
+    
+    NSMutableArray *summary = [[NSMutableArray alloc] init];
+    [summary addObjectsFromArray:aryUDN];
+    [summary addObjectsFromArray:aryLTN];
+    [summary addObjectsFromArray:aryApple];
+
+    NSArray *aryHighlight = [[FeedPuller sharedMgr] highlight: summary];
+    
+    
     return YES;
 }
 
@@ -41,5 +61,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+/*
+    UDN rss: http://udn.com/udnrss/latest.xml
+    LTN http://news.ltn.com.tw/rss/focus.xml
+    apple http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/new
+ 
+ */
 
 @end
