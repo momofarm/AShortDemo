@@ -2,12 +2,9 @@
 //  ATableViewController.m
 //  AShortDemo
 //
-//  Created by momofarm on 4/21/16.
-//  Copyright © 2016 Chen Kuanfu. All rights reserved.
-//
 
 #import "ATableViewController.h"
-
+#import "AppDelegate.h"
 @interface ATableViewController ()
 
 @end
@@ -22,6 +19,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    AppDelegate *del = [[UIApplication sharedApplication] delegate];
+    
+    
+    if ([del.aryApple count] > 0)
+    {
+        //[del.aryApple removeObjectAtIndex:0];
+        
+        NSMutableArray *ar =del.aryApple;
+        
+        [ar removeObjectAtIndex:0];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,23 +43,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
+    AppDelegate *del = [[UIApplication sharedApplication] delegate];
+    
+    
+    if ([del.aryApple count] > 0)
+    {
+        
+        return [del.aryApple count];
+    }
+    
+    
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DemoLabel" forIndexPath:indexPath];
+    
+    AppDelegate *del = [[UIApplication sharedApplication] delegate];
+    
+    if (del)
+    {
+        
+        NSDictionary *d = [del.aryApple objectAtIndex:indexPath.row];
+        
+        //NSLog(@"text is %@\n", [d objectForKey:@"title"]);
+        cell.textLabel.text = [d objectForKey:@"title"];
+        
+    }
+        //return [del.aryApple count];
+    
+
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

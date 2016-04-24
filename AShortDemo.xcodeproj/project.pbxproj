@@ -19,7 +19,6 @@
 		8E21912A1CC8C06900DBD37B /* BTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191291CC8C06900DBD37B /* BTableViewController.m */; };
 		8E21912D1CC8C07B00DBD37B /* CTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E21912C1CC8C07B00DBD37B /* CTableViewController.m */; };
 		8E2191321CC9AFAD00DBD37B /* FeedPuller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191311CC9AFAD00DBD37B /* FeedPuller.m */; };
-		8E2191351CC9BC5100DBD37B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2191331CC9BB7F00DBD37B /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		8E21912C1CC8C07B00DBD37B /* CTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTableViewController.m; sourceTree = "<group>"; };
 		8E2191301CC9AFAD00DBD37B /* FeedPuller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedPuller.h; path = ../FeedPuller.h; sourceTree = "<group>"; };
 		8E2191311CC9AFAD00DBD37B /* FeedPuller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedPuller.m; path = ../FeedPuller.m; sourceTree = "<group>"; };
-		8E2191331CC9BB7F00DBD37B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2191351CC9BC5100DBD37B /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +93,6 @@
 		8E2190DD1CC8B28100DBD37B = {
 			isa = PBXGroup;
 			children = (
-				8E2191331CC9BB7F00DBD37B /* libxml2.tbd */,
 				8E2191221CC8BFD500DBD37B /* SummaryViewController.h */,
 				8E2191231CC8BFD500DBD37B /* SummaryViewController.m */,
 				8E2190E81CC8B28100DBD37B /* AShortDemo */,

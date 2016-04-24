@@ -2,9 +2,7 @@
 //  FeedPuller.h
 //  AShortDemo
 //
-//  Created by momofarm on 4/22/16.
-//  Copyright © 2016 Chen Kuanfu. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 
@@ -13,21 +11,18 @@
     
     
 }
-- (NSArray *)parse:(NSString *)url;
+- (NSMutableArray *)parse:(NSString *)url;
 
 + (id) sharedMgr;
 
-- (NSArray *) pull:(NSString *)url;
-
-- (NSArray *) highlight:(NSArray *)aryInput;
-
-@property NSArray *aryMatch;
-
-@property BOOL matched;
+@property BOOL titleMatched;
+@property BOOL linkMatched;
 
 @property NSUInteger matchIndex;
 
-@property NSMutableSet *resultSet;
+@property NSMutableArray *resultAry;
 
+@property NSString *currentTitle;
+@property NSString *currentLink;
 
 @end

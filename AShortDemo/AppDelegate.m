@@ -2,9 +2,18 @@
 //  AppDelegate.m
 //  AShortDemo
 //
-//  Created by momofarm on 4/21/16.
-//  Copyright © 2016 Chen Kuanfu. All rights reserved.
-//
+/*
+ For anyone want to use these, just take it and use it at yourown
+ I'd spend more time preparing for tests like Amazon or Google (yeah, lots of algorithm .... and fu*king math)
+ 
+ I don't understand why Taiwanese HR / or some random interview officer want me to take some real demo of my work.
+ 
+ this piece of shi* does not represent my work, it will just become 1 of million apps on app store and 
+ benefit NO ONE, really no one.
+
+ need to take some of these to prove I am a programmer, this is really piece of crap....
+*/
+
 
 #import "AppDelegate.h"
 #import "FeedPuller.h"
@@ -20,46 +29,53 @@ NSString *strUDN = @"http://udn.com/udnrss/latest.xml";
 NSString *strLTN = @"http://news.ltn.com.tw/rss/focus.xml";
 NSString *strApple = @"http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/new";
 
+@synthesize aryLTN, aryUDN, aryApple, arySummary;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSArray *aryUDN = [[FeedPuller sharedMgr] parse:strUDN];
-    NSArray *aryLTN = [[FeedPuller sharedMgr] parse:strLTN];
-    NSArray *aryApple = [[FeedPuller sharedMgr] parse:strApple];
+    NSMutableArray *UDN = [[[FeedPuller sharedMgr] parse:strUDN] mutableCopy];
+    NSMutableArray *LTN = [[[FeedPuller sharedMgr] parse:strLTN] mutableCopy];
+    NSMutableArray *Apple = [[[FeedPuller sharedMgr] parse:strApple] mutableCopy];
     
+    aryUDN = UDN;
+    aryLTN = LTN;
+    aryApple = Apple;
     
-    NSMutableArray *summary = [[NSMutableArray alloc] init];
-    [summary addObjectsFromArray:aryUDN];
-    [summary addObjectsFromArray:aryLTN];
-    [summary addObjectsFromArray:aryApple];
-
-    NSArray *aryHighlight = [[FeedPuller sharedMgr] highlight: summary];
+    // this is just for the demo use, if want a better summary, need to use keyword extraction and clustering system
+    // right now, i don't have time for that
     
+    //  let's do it in a cheap way
+    NSMutableArray *summaryArray = [NSMutableArray array];
+    
+    [summaryArray addObjectsFromArray:[UDN subarrayWithRange:NSMakeRange(0, 5)]];
+    [summaryArray addObjectsFromArray:[LTN subarrayWithRange:NSMakeRange(0, 5)]];
+    [summaryArray addObjectsFromArray:[Apple subarrayWithRange:NSMakeRange(0, 5)]];
+    
+    arySummary = summaryArray;
     
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+ 
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+   
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+   
 }
 
 /*
