@@ -13,6 +13,7 @@
     NSMutableArray *aryUDN;
     NSMutableArray *aryLTN;
     NSMutableArray *aryApple;
+    NSMutableArray *arySummary;
 }
 
 

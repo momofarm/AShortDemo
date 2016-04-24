@@ -19,6 +19,11 @@
 		8E21912A1CC8C06900DBD37B /* BTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191291CC8C06900DBD37B /* BTableViewController.m */; };
 		8E21912D1CC8C07B00DBD37B /* CTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E21912C1CC8C07B00DBD37B /* CTableViewController.m */; };
 		8E2191321CC9AFAD00DBD37B /* FeedPuller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191311CC9AFAD00DBD37B /* FeedPuller.m */; };
+		8E21914C1CCC7E8800DBD37B /* SumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E21914B1CCC7E8800DBD37B /* SumViewController.m */; };
+		8E2191501CCC860000DBD37B /* nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914D1CCC860000DBD37B /* nature.jpg */; };
+		8E2191511CCC860000DBD37B /* movie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914E1CCC860000DBD37B /* movie.jpg */; };
+		8E2191521CCC860000DBD37B /* avenger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914F1CCC860000DBD37B /* avenger.jpg */; };
+		8E2191551CCCB47700DBD37B /* WebReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191541CCCB47700DBD37B /* WebReadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,13 @@
 		8E21912C1CC8C07B00DBD37B /* CTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTableViewController.m; sourceTree = "<group>"; };
 		8E2191301CC9AFAD00DBD37B /* FeedPuller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedPuller.h; path = ../FeedPuller.h; sourceTree = "<group>"; };
 		8E2191311CC9AFAD00DBD37B /* FeedPuller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedPuller.m; path = ../FeedPuller.m; sourceTree = "<group>"; };
+		8E21914A1CCC7E8800DBD37B /* SumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SumViewController.h; sourceTree = "<group>"; };
+		8E21914B1CCC7E8800DBD37B /* SumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SumViewController.m; sourceTree = "<group>"; };
+		8E21914D1CCC860000DBD37B /* nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nature.jpg; sourceTree = "<group>"; };
+		8E21914E1CCC860000DBD37B /* movie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = movie.jpg; sourceTree = "<group>"; };
+		8E21914F1CCC860000DBD37B /* avenger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avenger.jpg; sourceTree = "<group>"; };
+		8E2191531CCCB47700DBD37B /* WebReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebReadViewController.h; sourceTree = "<group>"; };
+		8E2191541CCCB47700DBD37B /* WebReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebReadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,10 @@
 				8E2190EC1CC8B28100DBD37B /* AppDelegate.h */,
 				8E2190ED1CC8B28100DBD37B /* AppDelegate.m */,
 				8E2190F51CC8B28100DBD37B /* Main.storyboard */,
+				8E2191531CCCB47700DBD37B /* WebReadViewController.h */,
+				8E2191541CCCB47700DBD37B /* WebReadViewController.m */,
+				8E21914A1CCC7E8800DBD37B /* SumViewController.h */,
+				8E21914B1CCC7E8800DBD37B /* SumViewController.m */,
 				8E2191251CC8BFFD00DBD37B /* ATableViewController.h */,
 				8E2191261CC8BFFD00DBD37B /* ATableViewController.m */,
 				8E2191281CC8C06900DBD37B /* BTableViewController.h */,
@@ -137,6 +153,9 @@
 		8E2190E91CC8B28100DBD37B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E21914D1CCC860000DBD37B /* nature.jpg */,
+				8E21914E1CCC860000DBD37B /* movie.jpg */,
+				8E21914F1CCC860000DBD37B /* avenger.jpg */,
 				8E2190EA1CC8B28100DBD37B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -263,6 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2191521CCC860000DBD37B /* avenger.jpg in Resources */,
+				8E2191501CCC860000DBD37B /* nature.jpg in Resources */,
+				8E2191511CCC860000DBD37B /* movie.jpg in Resources */,
 				8E2190FC1CC8B28100DBD37B /* LaunchScreen.storyboard in Resources */,
 				8E2190F91CC8B28100DBD37B /* Assets.xcassets in Resources */,
 				8E2190F71CC8B28100DBD37B /* Main.storyboard in Resources */,
@@ -291,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2191321CC9AFAD00DBD37B /* FeedPuller.m in Sources */,
+				8E2191551CCCB47700DBD37B /* WebReadViewController.m in Sources */,
 				8E2190EE1CC8B28100DBD37B /* AppDelegate.m in Sources */,
+				8E21914C1CCC7E8800DBD37B /* SumViewController.m in Sources */,
 				8E2190EB1CC8B28100DBD37B /* main.m in Sources */,
 				8E2191241CC8BFD500DBD37B /* SummaryViewController.m in Sources */,
 				8E21912A1CC8C06900DBD37B /* BTableViewController.m in Sources */,

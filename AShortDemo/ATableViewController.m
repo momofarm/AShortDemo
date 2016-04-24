@@ -34,6 +34,14 @@
     
 }
 
+- (IBAction)unwindToAppleMenu:(UIStoryboardSegue*)sender
+{
+    UIViewController *ctrl = sender.sourceViewController;
+    // blah blah ....
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
