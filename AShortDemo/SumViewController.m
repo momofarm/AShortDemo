@@ -8,7 +8,7 @@
 
 #import "SumViewController.h"
 #import "AppDelegate.h"
-#import "WebReadViewController.h"
+#import "WebViewController.h"
 @interface SumViewController ()
 
 @end
@@ -59,12 +59,24 @@
     if ([[segue identifier] isEqualToString:@"ReadWeb"])
     {
         // Get reference to the destination view controller
-        WebReadViewController *vc = [segue destinationViewController];
+        
+       WebViewController *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
         //[vc setMyObjectHere:object];
+        AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        if (del)
+        {
+           NSMutableDictionary *d =  del.arySummary[tableview.indexPathForSelectedRow.row];
+            
+            NSString *url = (NSString *)[d objectForKey:@"link"];
+            
+            vc.url = [url copy];
+            
+        }
     }
 }
+
 
 #pragma mark - Table view data source
 

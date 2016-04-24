@@ -6,6 +6,7 @@
 
 #import "BTableViewController.h"
 #import "AppDelegate.h"
+#import "WebViewController.h"
 
 @interface BTableViewController ()
 
@@ -48,6 +49,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"ReadLTN"])
+    {
+        // Get reference to the destination view controller
+        
+        WebViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        //[vc setMyObjectHere:object];
+        AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        if (del)
+        {
+            NSMutableDictionary *d =  del.aryLTN[tableview.indexPathForSelectedRow.row];
+            
+            NSString *url = (NSString *)[d objectForKey:@"link"];
+            
+            vc.url = [url copy];
+            
+        }
+    }
+}
+
 
 #pragma mark - Table view data source
 

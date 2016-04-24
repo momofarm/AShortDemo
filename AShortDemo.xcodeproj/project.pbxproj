@@ -23,7 +23,7 @@
 		8E2191501CCC860000DBD37B /* nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914D1CCC860000DBD37B /* nature.jpg */; };
 		8E2191511CCC860000DBD37B /* movie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914E1CCC860000DBD37B /* movie.jpg */; };
 		8E2191521CCC860000DBD37B /* avenger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914F1CCC860000DBD37B /* avenger.jpg */; };
-		8E2191551CCCB47700DBD37B /* WebReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2191541CCCB47700DBD37B /* WebReadViewController.m */; };
+		8E56BE891CCD168D00E426E4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E56BE881CCD168D00E426E4 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +73,8 @@
 		8E21914D1CCC860000DBD37B /* nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nature.jpg; sourceTree = "<group>"; };
 		8E21914E1CCC860000DBD37B /* movie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = movie.jpg; sourceTree = "<group>"; };
 		8E21914F1CCC860000DBD37B /* avenger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avenger.jpg; sourceTree = "<group>"; };
-		8E2191531CCCB47700DBD37B /* WebReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebReadViewController.h; sourceTree = "<group>"; };
-		8E2191541CCCB47700DBD37B /* WebReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebReadViewController.m; sourceTree = "<group>"; };
+		8E56BE871CCD168D00E426E4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8E56BE881CCD168D00E426E4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 				8E2190EC1CC8B28100DBD37B /* AppDelegate.h */,
 				8E2190ED1CC8B28100DBD37B /* AppDelegate.m */,
 				8E2190F51CC8B28100DBD37B /* Main.storyboard */,
-				8E2191531CCCB47700DBD37B /* WebReadViewController.h */,
-				8E2191541CCCB47700DBD37B /* WebReadViewController.m */,
+				8E56BE871CCD168D00E426E4 /* WebViewController.h */,
+				8E56BE881CCD168D00E426E4 /* WebViewController.m */,
 				8E21914A1CCC7E8800DBD37B /* SumViewController.h */,
 				8E21914B1CCC7E8800DBD37B /* SumViewController.m */,
 				8E2191251CC8BFFD00DBD37B /* ATableViewController.h */,
@@ -313,10 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2191321CC9AFAD00DBD37B /* FeedPuller.m in Sources */,
-				8E2191551CCCB47700DBD37B /* WebReadViewController.m in Sources */,
 				8E2190EE1CC8B28100DBD37B /* AppDelegate.m in Sources */,
 				8E21914C1CCC7E8800DBD37B /* SumViewController.m in Sources */,
 				8E2190EB1CC8B28100DBD37B /* main.m in Sources */,
+				8E56BE891CCD168D00E426E4 /* WebViewController.m in Sources */,
 				8E2191241CC8BFD500DBD37B /* SummaryViewController.m in Sources */,
 				8E21912A1CC8C06900DBD37B /* BTableViewController.m in Sources */,
 				8E2191271CC8BFFD00DBD37B /* ATableViewController.m in Sources */,

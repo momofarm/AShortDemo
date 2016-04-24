@@ -5,6 +5,7 @@
 
 #import "ATableViewController.h"
 #import "AppDelegate.h"
+#import "WebViewController.h"
 @interface ATableViewController ()
 
 @end
@@ -33,6 +34,31 @@
     }
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"ReadApple"])
+    {
+        // Get reference to the destination view controller
+        
+        WebViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        //[vc setMyObjectHere:object];
+        AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        if (del)
+        {
+            NSMutableDictionary *d =  del.aryApple[tableview.indexPathForSelectedRow.row];
+            
+            NSString *url = (NSString *)[d objectForKey:@"link"];
+            
+            vc.url = [url copy];
+            
+        }
+    }
+}
+
 
 - (IBAction)unwindToAppleMenu:(UIStoryboardSegue*)sender
 {

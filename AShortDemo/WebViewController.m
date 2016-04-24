@@ -1,31 +1,33 @@
 //
-//  WebReadViewController.m
+//  WebViewController.m
 //  AShortDemo
 //
 //  Created by momofarm on 4/24/16.
 //  Copyright © 2016 Chen Kuanfu. All rights reserved.
 //
 
-#import "WebReadViewController.h"
+#import "WebViewController.h"
 
-@interface WebReadViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation WebReadViewController
+@implementation WebViewController
+@synthesize url,webview;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURLRequest *r = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    [webview loadRequest:r];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 /*
 #pragma mark - Navigation
