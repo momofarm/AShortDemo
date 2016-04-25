@@ -24,6 +24,7 @@
 		8E2191511CCC860000DBD37B /* movie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914E1CCC860000DBD37B /* movie.jpg */; };
 		8E2191521CCC860000DBD37B /* avenger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E21914F1CCC860000DBD37B /* avenger.jpg */; };
 		8E56BE891CCD168D00E426E4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E56BE881CCD168D00E426E4 /* WebViewController.m */; };
+		8E8670BE1CCDACB400279F2C /* Apple2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8670BD1CCDACB400279F2C /* Apple2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		8E21914F1CCC860000DBD37B /* avenger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avenger.jpg; sourceTree = "<group>"; };
 		8E56BE871CCD168D00E426E4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		8E56BE881CCD168D00E426E4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8E8670BD1CCDACB400279F2C /* Apple2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		8E2190E91CC8B28100DBD37B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E8670BD1CCDACB400279F2C /* Apple2.png */,
 				8E21914D1CCC860000DBD37B /* nature.jpg */,
 				8E21914E1CCC860000DBD37B /* movie.jpg */,
 				8E21914F1CCC860000DBD37B /* avenger.jpg */,
@@ -246,6 +249,7 @@
 				TargetAttributes = {
 					8E2190E51CC8B28100DBD37B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DEXA5LVA34;
 					};
 					8E2191011CC8B28200DBD37B = {
 						CreatedOnToolsVersion = 7.3;
@@ -284,6 +288,7 @@
 			files = (
 				8E2191521CCC860000DBD37B /* avenger.jpg in Resources */,
 				8E2191501CCC860000DBD37B /* nature.jpg in Resources */,
+				8E8670BE1CCDACB400279F2C /* Apple2.png in Resources */,
 				8E2191511CCC860000DBD37B /* movie.jpg in Resources */,
 				8E2190FC1CC8B28100DBD37B /* LaunchScreen.storyboard in Resources */,
 				8E2190F91CC8B28100DBD37B /* Assets.xcassets in Resources */,
@@ -463,10 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AShortDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bellastar.AShortDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -474,10 +482,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AShortDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bellastar.AShortDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -36,7 +36,7 @@ NSString *strApple = @"http://www.appledaily.com.tw/rss/newcreate/kind/rnews/typ
     
     NSMutableArray *UDN = [[[FeedPuller sharedMgr] parse:strUDN] mutableCopy];
     NSMutableArray *LTN = [[[FeedPuller sharedMgr] parse:strLTN] mutableCopy];
-    NSMutableArray *Apple = [NSMutableArray array]; //[[[FeedPuller sharedMgr] parse:strApple] mutableCopy];
+    NSMutableArray *Apple = [[[FeedPuller sharedMgr] parse:strApple] mutableCopy];
     
     aryUDN = UDN;
     aryLTN = LTN;
@@ -50,7 +50,7 @@ NSString *strApple = @"http://www.appledaily.com.tw/rss/newcreate/kind/rnews/typ
     
     [summaryArray addObjectsFromArray:[UDN subarrayWithRange:NSMakeRange(0, 5)]];
     [summaryArray addObjectsFromArray:[LTN subarrayWithRange:NSMakeRange(0, 5)]];
-    //[summaryArray addObjectsFromArray:[Apple subarrayWithRange:NSMakeRange(0, 5)]];
+    [summaryArray addObjectsFromArray:[Apple subarrayWithRange:NSMakeRange(0, 5)]];
     
     arySummary = summaryArray;
     
